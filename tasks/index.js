@@ -7,6 +7,7 @@ const { countNumberOfVowels } = require("./countNumberOfVowels");
 const { findLargestNum } = require("./findLargestNum");
 const { factorial } = require("./factorial");
 const { primeOrNot } = require("./primeOrNot");
+const { minAndMaxInArray } = require("./findMinAndMax");
 
 module.exports = {
   anagram,
@@ -18,4 +19,5 @@ module.exports = {
   removeDuplicates,
   reverseTheString,
   sumOfTen,
+  minAndMaxInArray
 };

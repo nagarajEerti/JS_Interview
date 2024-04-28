@@ -9,6 +9,7 @@ const {
   anagram,
   findLargestNum,
   primeOrNot,
+  minAndMaxInArray,
 } = require("./tasks/index");
 const { countNumberOfVowels } = require("./tasks/countNumberOfVowels");
 const { factorial } = require("./tasks/factorial");
@@ -58,6 +59,8 @@ const { factorial } = require("./tasks/factorial");
 // let sum2 = a=>b=> b?  sum2(a+b):a;
 
 // console.log(sum2(1)(2)(3)(4)());
+
+// console.log(minAndMaxInArray([7, 3, 8, 8, 6, 4, 2, 1, 2, 5, 6, 4, 1, 9, 111]));
 
 app.listen(9000, () => {
   console.log("server was started");
