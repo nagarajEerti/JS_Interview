@@ -57,7 +57,7 @@ exports.SeatingStudents = function (noOfDesks, occupiedDesks) {
 
 
 
-    return { possiblePositions};
+    return { possiblePositions };
 };
 
 console.log(this.SeatingStudents(5, [2, 6, 7, 11]));
