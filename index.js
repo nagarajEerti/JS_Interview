@@ -10,9 +10,10 @@ const {
   findLargestNum,
   primeOrNot,
   minAndMaxInArray,
+  factorial,
+  countNumberOfVowels
 } = require("./tasks/index");
-const { countNumberOfVowels } = require("./tasks/countNumberOfVowels");
-const { factorial } = require("./tasks/factorial");
+
 
 // task 1
 //  input = [7,3,8,2,5,6,4,1,9]
