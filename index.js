@@ -14,7 +14,8 @@ const { findElementsSumTo10,
     removeDuplicates,
     findDuplicatesInArray,
     groupThePeopleWithAge,
-    containsInSequence
+    containsInSequence,
+    targetSum
 } = require('./Algorithms');
 // const translate = require('google-translate-api');
 // const meet = require('./googlemeet');
@@ -23,7 +24,7 @@ const express = require('express');
 const app = express();
 const { PDFDocument, rgb } = require('pdf-lib');
 const fs = require('fs');
-app.get('/api/hello', test.getMyName);
+// app.get('/api/hello', test.getMyName);
 // app.get('/meet', meet.generateMeetLink)
 app.listen(3000, () => {
     console.log("server running");
@@ -121,7 +122,8 @@ app.listen(3000, () => {
 const A = "abc";
 const B = "123";
 const C = "a1b2c3";
-console.log(containsInSequence(A, B, C), "containsInSequence");
+// console.log(containsInSequence(A, B, C), "containsInSequence");
+console.log(targetSum(12,[7,5,8,4,9,1,5,7,1,11,6,6,2,2]));
 /*
 Linked List Operations:
 Implement basic operations for a singly linked list (e.g., insert at the beginning, delete a node, reverse the list).
@@ -139,6 +141,7 @@ Longest Common Subsequence:
 Write a function to find the longest common subsequence of two strings.
 
 Subset Sum Problem:
+
 Given an array of numbers and a target sum, determine if there is a subset of the array that adds up to the target sum.
 
 Knapsack Problem:

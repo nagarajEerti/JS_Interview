@@ -221,7 +221,21 @@ function containsInSequence(a, b, c) {
     }
     return false;
 }
+function targetSum(total, array) {
+    let nums = new Set();
+    let combArray = [];
+    for (let index = 0; index < array.length; index++) {
+       
+        if (nums.has(total - array[index])) {
+            combArray.push([total - array[index], array[index]]);
+        }
+        else{
+            nums.add(array[index]);
+        }
 
+    }
+    return combArray;
+}
 module.exports = {
     findElementsSumTo10,
     countEachCharInString,
@@ -239,5 +253,6 @@ module.exports = {
     removeDuplicates,
     findDuplicatesInArray,
     groupThePeopleWithAge,
-    containsInSequence
+    containsInSequence,
+    targetSum
 }
