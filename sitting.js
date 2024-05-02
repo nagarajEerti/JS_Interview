@@ -30,10 +30,28 @@
  * Hence the answer 6.
  */
 exports.SeatingStudents = function (noOfDesks, occupiedDesks) {
-    console.log('test');
-    let EmptyDeskArray = [];
     let sittingArrange = [];
     let possiblePositions = [];
+
+    for (let i = 1; i <= noOfDesks; i++) {
+        if (i % 2 == 0 && i <= noOfDesks) {
+            if (i + 2 <= noOfDesks) sittingArrange.push([i, i + 2])
+        }
+        if (i % 2 !== 0) {
+            sittingArrange.push([i, i + 1])
+
+            if (i + 2 <= noOfDesks) sittingArrange.push([i, i + 2])
+        }
+        possiblePositions =  sittingArrange.filter(pair=> !occupiedDesks.includes(pair[0]) && !occupiedDesks.includes(pair[1]));
+    }
+    return { possiblePositions };
+};
+
+console.log(this.SeatingStudents(12, [2, 6, 7, 11]));
+// console.log(this.SeatingStudents(12, [2, 3, 6, 7, 10, 11]));
+
+
+/*
     for (let i = 1; i <= noOfDesks; i++) {
         if (occupiedDesks.indexOf(i) == -1) {
             EmptyDeskArray.push(i);
@@ -53,12 +71,4 @@ exports.SeatingStudents = function (noOfDesks, occupiedDesks) {
 
 
     }
-    
-
-
-
-    return { possiblePositions };
-};
-
-console.log(this.SeatingStudents(5, [2, 6, 7, 11]));
-// console.log(this.SeatingStudents(12, [2, 3, 6, 7, 10, 11]));
+*/
